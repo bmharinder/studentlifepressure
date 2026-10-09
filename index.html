@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pressure Points — The Truth About Student Life</title>
+<meta name="description" content="An interactive story about student life pressure, and why you don't have to face it alone.">
+<meta name="theme-color" content="#08090D">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,800..900&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>#intro{display:none}</style></noscript>
+</head>
+<body class="lock">
+<a class="skip" href="#main">Skip to content</a>
+<div id="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<!-- INTRO -->
+<section id="intro" aria-label="Introduction">
+  <svg class="art" viewBox="0 0 400 300" aria-hidden="true" focusable="false">
+    <path d="M250 40 L330 250 L170 250Z" fill="rgba(255,77,90,.07)"/>
+    <rect x="60" y="215" width="300" height="10" fill="#1a1b22"/>
+    <rect x="90" y="196" width="60" height="19" fill="#23242d"/><rect x="96" y="180" width="52" height="16" fill="#1c1d25"/>
+    <rect x="270" y="205" width="50" height="10" fill="#2a2b35" transform="rotate(-6 295 210)"/>
+    <circle cx="215" cy="150" r="16" fill="#15161c"/><path d="M185 215 Q190 172 215 168 Q240 172 245 215Z" fill="#15161c"/>
+    <path d="M300 215 V120 L270 80" stroke="#2e2f3a" stroke-width="4" fill="none"/><circle cx="268" cy="78" r="7" fill="#FF4D5A"/>
+  </svg>
+  <div class="kws" aria-hidden="true"><span class="kw">EXPECTATIONS</span><span class="kw">EXAMS</span><span class="kw">COMPARISON</span><span class="kw">DEADLINES</span><span class="kw">SELF-DOUBT</span></div>
+  <button id="skipIntro" class="ghost mono" type="button">SKIP INTRO</button>
+  <div class="intro-in">
+    <p class="f1 mono"><i class="dot"></i>STUDENT LIFE // REALITY CHECK</p>
+    <div class="f2"><div id="introClock" class="clock mono" aria-label="02:17 AM">02:17 AM</div><p>Another night. Another deadline.</p></div>
+    <div class="fin">
+      <h1 class="f4"><span class="ln"><span>PRESSURE</span></span><span class="ln"><span>POINTS<b>.</b></span></span></h1>
+      <p class="mono sub">THE TRUTH ABOUT STUDENT LIFE.</p>
+      <p class="quote">“Behind every ‘I’m fine’ is a story worth hearing.”</p>
+      <button id="enter" class="btn" type="button">[ ENTER THE EXPERIENCE ↗ ]</button>
+    </div>
+  </div>
+</section>
+
+<header class="nav">
+  <a href="#top" class="mono logo">PP//</a>
+  <nav aria-label="Main"><a href="#mask">THE MASK</a><a href="#pressure">THE PRESSURE</a><a href="#stories">THE STORIES</a><a href="#solutions">THE SOLUTIONS</a></nav>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- HERO -->
+<section id="top" class="hero"><div id="mask" class="wrap hero-grid">
+  <div class="hero-txt">
+    <p class="mono label rv">BEHIND THE NUMBERS</p>
+    <h1 tabindex="-1" id="heroH"><span class="ln"><span>EVERYTHING</span></span><span class="ln"><span>LOOKS FINE.</span></span><span class="ln red"><span>BUT IS IT?</span></span></h1>
+    <p class="lead rv">Good grades. Perfect expectations. Endless deadlines. Sometimes, the hardest part of being a student is pretending that everything is okay.</p>
+    <p class="btns rv"><a class="btn" href="#pressure">EXPLORE THE REALITY ↓</a><a class="btn alt" href="#final">WHY THIS MATTERS ↗</a></p>
+  </div>
+  <div class="rv">
+    <div class="split" id="split" style="--x:50%">
+      <div class="side b"><span class="mono tag">WHAT THEY DON’T SEE</span>
+        <ul class="chips"><li>Assignment due 11:59 PM</li><li>Exam in 2 days</li><li>14 unread messages</li><li>Notes not finished</li></ul>
+        <p class="say">“I’m trying my best.”</p></div>
+      <div class="side a"><span class="mono tag">WHAT PEOPLE SEE</span>
+        <div class="face" aria-hidden="true"></div>
+        <ul class="chips"><li>Good grades</li><li>Always on time</li><li>Smiling in class</li></ul>
+        <p class="say">“I’m fine.”</p></div>
+      <i class="div" aria-hidden="true"></i>
+    </div>
+    <label class="mono rng">DRAG TO REVEAL BOTH SIDES<input id="rng" type="range" min="5" max="95" value="50" aria-label="Reveal what people see versus what they don't see"></label>
+  </div>
+</div></section>
+
+<!-- METER -->
+<section id="pressure" class="sec"><div class="wrap">
+  <p class="mono label" data-r>STUDENT LIFE // SYSTEM STATUS</p>
+  <div class="meter">
+    <div class="ind" role="group" aria-label="Pressure indicators">
+      <button type="button" data-i="0" data-r><span>ACADEMIC PRESSURE</span><em><i style="--v:.82"></i></em></button>
+      <button type="button" data-i="1" data-r><span>SOCIAL EXPECTATIONS</span><em><i style="--v:.68"></i></em></button>
+      <button type="button" data-i="2" data-r><span>SELF-DOUBT</span><em><i style="--v:.74"></i></em></button>
+      <button type="button" data-i="3" data-r><span>TIME PRESSURE</span><em><i style="--v:.9"></i></em></button>
+    </div>
+    <div class="ring" data-r>
+      <svg viewBox="0 0 220 220" aria-hidden="true"><circle cx="110" cy="110" r="90" class="trk"/><circle id="arc" cx="110" cy="110" r="90" class="arc"/></svg>
+      <div class="rc" aria-live="polite"><h2 id="mLabel" class="glitch-t">PRESSURE IS REAL.</h2><p id="mInfo">Select an indicator.</p></div>
+    </div>
+  </div>
+  <p class="note mono" data-r>Illustrative interface values, not scientific measurements.</p>
+  <a class="btn" href="#expect" data-r>UNDERSTAND THE PRESSURE →</a>
+</div></section>
+
+<!-- EXPECTATIONS -->
+<section id="expect" class="sec tone" data-t="0"><i class="tl"></i><i class="tl"></i><i class="tl"></i>
+<div class="wrap">
+  <h2 class="big" data-r>MORE THAN JUST MARKS.</h2>
+  <div class="panels">
+    <article class="pn" data-r><button type="button" aria-expanded="false" aria-controls="m0"><span class="mono">PANEL 1</span><h3>ACADEMIC PRESSURE</h3><p>Exams, assignments, deadlines, grades, and the fear of not meeting expectations.</p><b aria-hidden="true">+</b></button>
+      <div class="more" id="m0"><div><p>When every test feels like a verdict, rest starts to feel like falling behind. The pressure is real, and so is the effort behind every submission.</p></div></div></article>
+    <article class="pn" data-r><button type="button" aria-expanded="false" aria-controls="m1"><span class="mono">PANEL 2</span><h3>PEER PRESSURE</h3><p>Comparing achievements, trying to fit in, and feeling the need to follow everyone else’s path.</p><b aria-hidden="true">+</b></button>
+      <div class="more" id="m1"><div><p>Other people’s paths are visible. Their doubts usually aren’t. Choosing your own direction can feel lonely at first, and that is normal.</p></div></div></article>
+    <article class="pn" data-r><button type="button" aria-expanded="false" aria-controls="m2"><span class="mono">PANEL 3</span><h3>INTERNAL PRESSURE</h3><p>Self-doubt, perfectionism, fear of failure, and the constant feeling of needing to do more.</p><b aria-hidden="true">+</b></button>
+      <div class="more" id="m2"><div><p>The loudest critic is often the one inside. Noticing that voice is the first step to answering it kindly.</p></div></div></article>
+  </div>
+</div></section>
+
+<!-- NIGHT -->
+<section id="night" class="night" aria-label="The 2:17 AM experience">
+  <div class="stick">
+    <p class="mono label">THE 2:17 AM EXPERIENCE</p>
+    <div id="nClock" class="clock mono" aria-live="polite">11:48 PM</div>
+    <div class="ths">
+      <p class="th on"><time class="mono">11:48 PM</time>“Just one more assignment.”</p>
+      <p class="th"><time class="mono">12:36 AM</time>“I should have started earlier.”</p>
+      <p class="th"><time class="mono">01:24 AM</time>“What if I am not good enough?”</p>
+      <p class="th"><time class="mono">02:17 AM</time>“I wish someone understood.”</p>
+    </div>
+    <p class="mono hint">SCROLL ↓ TIME MOVES WITH YOU</p>
+  </div>
+</section>
+<section class="sec end"><div class="wrap center">
+  <p class="big sm" data-r>Being productive is not the same as being okay.</p>
+  <a class="btn alt" href="#compare" data-r>KEEP GOING ↓</a>
+</div></section>
+
+<!-- COMPARISON -->
+<section id="compare" class="sec"><div class="wrap">
+  <span class="ghost-t" aria-hidden="true" data-p="-12">NOT A RACE</span>
+  <h2 class="big" data-r>YOUR JOURNEY IS NOT A RACE.</h2>
+  <div class="cmp" data-r>
+    <svg viewBox="0 0 800 350" role="img" aria-label="Four timelines: their achievements as sharp steps, your progress as a steady climb, expectations as a steep line, and real life as a wobbly path">
+      <g class="mono"><text x="0" y="14">THEIR ACHIEVEMENTS</text><text x="0" y="116">YOUR PROGRESS</text><text x="0" y="214">EXPECTATIONS</text><text x="0" y="296">REAL LIFE</text></g>
+      <path class="p" d="M0 100 H120 L150 70 H330 L360 50 H600 L630 36 H800"/>
+      <path class="p" d="M0 190 C120 195 200 170 300 180 S520 160 600 158 S740 138 800 130"/>
+      <path class="p" d="M0 270 L800 205"/>
+      <path class="p" d="M0 345 C100 315 150 350 260 325 S400 290 480 335 S640 305 800 300"/>
+      <circle class="mk r" r="7"/><circle class="mk" r="7"/><circle class="mk r" r="7"/><circle class="mk" r="7"/>
+    </svg>
+    <div class="ctl"><button type="button" id="play" class="btn alt">PLAY THE TIMELINES</button>
+      <input id="tl" type="range" min="0" max="100" value="0" aria-label="Move through time"></div>
+    <p id="cmsg" class="quote" aria-live="polite">Move through time to see what each line really shows.</p>
+  </div>
+</div></section>
+
+<!-- STORIES -->
+<section id="stories" class="sec"><div class="wrap">
+  <h2 class="big" data-r>BEHIND EVERY STUDENT IS A STORY.</h2>
+  <p class="note mono" data-r>Illustrative stories, not real student testimonials.</p>
+  <div class="cards">
+    <figure class="card" data-r><span class="qm" aria-hidden="true">“</span><figcaption class="mono">STORY 01 — THE TOPPER</figcaption><blockquote>Everyone expects me to have all the answers. Sometimes, I am still figuring things out myself.</blockquote></figure>
+    <figure class="card" data-r><span class="qm" aria-hidden="true">“</span><figcaption class="mono">STORY 02 — THE QUIET ONE</figcaption><blockquote>I do not always know how to explain what I feel. That does not mean I have nothing to say.</blockquote></figure>
+    <figure class="card" data-r><span class="qm" aria-hidden="true">“</span><figcaption class="mono">STORY 03 — THE ONE WHO KEEPS TRYING</figcaption><blockquote>My progress may not look like everyone else’s, but I am still moving forward.</blockquote></figure>
+  </div>
+  <form id="msgForm" class="msg" data-r>
+    <label for="msg">Write a message about student life</label>
+    <p class="note">Nothing is sent anywhere: this site has no backend. Your words stay on this page and disappear when you leave. Please don’t include personal details.</p>
+    <textarea id="msg" rows="3" maxlength="240" required></textarea>
+    <button class="btn" type="submit">SHOW MY MESSAGE</button>
+    <p id="msgOut" class="quote" aria-live="polite"></p>
+  </form>
+</div></section>
+
+<!-- SOLUTIONS -->
+<section id="solutions" class="sec calm"><div class="wrap sol">
+  <div>
+    <h2 class="big" data-r>YOU DON’T HAVE TO FIGURE IT ALL OUT ALONE.</h2>
+    <ol class="ideas">
+      <li data-r><span class="mono">01</span><h3>BREAK IT DOWN</h3><p>Turn a large assignment into smaller, manageable tasks.</p></li>
+      <li data-r><span class="mono">02</span><h3>TAKE REAL BREAKS</h3><p>Make room for rest, hobbies, and activities you enjoy.</p></li>
+      <li data-r><span class="mono">03</span><h3>TALK TO SOMEONE</h3><p>Reach out to a trusted friend, family member, teacher, or counsellor when things feel overwhelming.</p></li>
+      <li data-r><span class="mono">04</span><h3>ASK FOR HELP</h3><p>Seeking support is a strength, not a weakness.</p></li>
+    </ol>
+    <p class="note" data-r>Small habits won’t solve everything, and that’s okay. If you feel unsafe or in crisis, contact local emergency services or a helpline in your area.</p>
+  </div>
+  <div class="vis" data-r><svg id="lines" viewBox="0 0 400 320" aria-hidden="true"></svg>
+    <button type="button" id="untangle" class="btn alt">TANGLE AGAIN</button></div>
+</div></section>
+
+<!-- FINAL -->
+<section id="final" class="final"><div class="wrap center">
+  <p class="fl" data-r>YOU ARE MORE THAN YOUR MARKS.</p>
+  <p class="fl" data-r>MORE THAN YOUR RANK.</p>
+  <p class="fl" data-r>MORE THAN SOMEONE ELSE’S EXPECTATIONS.</p>
+  <p class="statement" data-r>Student life isn’t easy.<br>But you don’t have to face it alone.</p>
+  <p class="mono brand" data-r>PRESSURE POINTS<br>THE TRUTH ABOUT STUDENT LIFE</p>
+  <a class="btn" href="#top" data-r>REVISIT THE EXPERIENCE ↗</a>
+</div></section>
+</main>
+
+<footer class="foot mono"><span>Created by Team Potato — BCADS 13</span><span>Design/UI: Divist · Frontend Code: Dev · Deployment: Hari</span></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
