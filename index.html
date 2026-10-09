@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Life Underwater — The Future Ocean City | Team Potato</title>
+<meta name="description" content="A futuristic underwater city in 2050. PIXEL PERSONA 2026 by Team Potato, BCADS 13.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- PAGE 1: IDENTITY -->
+<section id="gate" class="scene">
+  <div class="rays"></div><div class="ambient"></div>
+  <div class="city-bg" data-city></div>
+  <div class="kelp"></div>
+  <main class="gate-inner">
+    <h1 class="glitch">DESCEND INTO THE FUTURE</h1>
+    <p class="sub">Welcome to humanity's first underwater civilization.</p>
+    <form id="idForm" class="glass card-id" novalidate>
+      <h2>IDENTITY VERIFICATION</h2>
+      <label for="uName">Full Name</label>
+      <input id="uName" type="text" placeholder="Enter your name" autocomplete="name" maxlength="40">
+      <label for="uMail">Gmail</label>
+      <input id="uMail" type="email" placeholder="xyz@gmail.com" autocomplete="email" inputmode="email">
+      <p id="warn" class="warn" role="alert" aria-live="polite"></p>
+      <button class="btn" type="submit">DIVE INTO 2050 ↓</button>
+    </form>
+  </main>
+</section>
+
+<!-- CINEMATIC INTRO -->
+<section id="intro" class="scene hidden" aria-live="polite">
+  <div class="rays"></div><div class="ambient"></div>
+  <div class="glow-life"></div>
+  <div class="city-bg far" data-city></div>
+  <div id="pod" class="pod"><span></span></div>
+  <div class="hud"><small>DIVING DEPTH</small><b id="depth">0 m</b></div>
+  <h2 id="introText" class="intro-text"></h2>
+  <button id="skip" class="btn ghost skip">SKIP INTRO</button>
+</section>
+
+<!-- MAIN SITE -->
+<div id="site" class="hidden">
+<header id="nav">
+  <a href="#home" class="logo">🌊 LIFE UNDERWATER</a>
+  <button id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <nav id="menu">
+    <a href="#home">HOME</a><a href="#city">OCEAN CITY</a><a href="#ai">AI &amp; ROBOTS</a><a href="#transport">TRANSPORT</a><a href="#energy">ENERGY</a><a href="#life">LIFE BELOW</a><a href="#about">ABOUT</a>
+  </nav>
+  <div class="status"><span>DEPTH: 1000M</span><span class="on">● CITY ONLINE</span></div>
+</header>
+
+<section id="home" class="hero scene">
+  <div class="rays"></div><div class="ambient" data-n="26"></div>
+  <div class="city-bg big" data-city></div>
+  <div class="hero-inner">
+    <h1 class="glitch">WELCOME TO THE FUTURE</h1>
+    <p class="sub">Where humanity lives beneath the waves.</p>
+    <h2 class="neon">LIFE UNDERWATER</h2>
+    <p class="lead">By 2050, the ocean may no longer be just a place we explore. It could become a new frontier for human civilization.</p>
+    <a href="#city" class="btn">EXPLORE THE CITY ↓</a>
+  </div>
+</section>
+
+<section id="city" class="sec rv">
+  <h2>A CITY BENEATH THE WAVES</h2>
+  <p class="lead">Imagine a self-sustaining city protected by enormous transparent domes, where homes, laboratories, schools and entertainment districts exist beneath the ocean.</p>
+  <div class="grid" data-k="city"></div>
+</section>
+
+<section id="ai" class="sec rv">
+  <h2>INTELLIGENCE BELOW THE WAVES</h2>
+  <p class="lead">AI keeps the underwater city alive.</p>
+  <div class="grid" data-k="ai"></div>
+</section>
+
+<section id="transport" class="sec rv">
+  <h2>HOW DO WE MOVE?</h2>
+  <p class="lead">Transportation designed for the ocean.</p>
+  <div class="grid" data-k="transport"></div>
+  <div class="glass lane" id="lane">
+    <div class="city-bg mini" data-city></div>
+    <div id="sub" class="sub-ship"><i></i></div>
+    <p id="subMsg" class="lane-msg"></p>
+    <button id="launch" class="btn">LAUNCH SUBMARINE</button>
+  </div>
+</section>
+
+<section id="energy" class="sec rv">
+  <h2>POWER FROM THE OCEAN</h2>
+  <p class="lead">A city that survives without destroying its environment.</p>
+  <div class="grid" data-k="energy"></div>
+  <div class="glass power">
+    <svg viewBox="0 0 120 120" class="ring" aria-hidden="true"><circle cx="60" cy="60" r="52" class="trk"/><circle id="arc" cx="60" cy="60" r="52" class="arc"/></svg>
+    <div><small>CITY POWER</small><b class="big-num"><span class="count" data-to="96">0</span>% RENEWABLE</b></div>
+  </div>
+</section>
+
+<section id="life" class="sec rv">
+  <h2>WHAT IS LIFE LIKE BELOW?</h2>
+  <div class="grid three" data-k="life"></div>
+</section>
+
+<section id="control" class="sec rv ctl">
+  <div class="glow-life"></div>
+  <h2>OCEAN CITY CONTROL</h2>
+  <button id="aiBtn" class="btn big">ACTIVATE OCEAN CITY AI</button>
+  <button id="aiOff" class="btn ghost hidden">DEACTIVATE SYSTEM</button>
+  <p id="aiMsg" class="lane-msg"></p>
+</section>
+
+<section id="status" class="sec rv">
+  <h2>OCEAN CITY STATUS</h2>
+  <div class="grid three stats">
+    <div class="glass"><small>OXYGEN</small><b><span class="count" data-to="98">0</span>%</b></div>
+    <div class="glass"><small>WATER QUALITY</small><b>Excellent</b></div>
+    <div class="glass"><small>CITY POWER</small><b><span class="count" data-to="96">0</span>% Renewable</b></div>
+    <div class="glass"><small>POPULATION</small><b class="count" data-to="128450">0</b></div>
+    <div class="glass"><small>AI NETWORK</small><b class="on">ONLINE</b></div>
+    <div class="glass"><small>OCEAN ECOSYSTEM</small><b>STABLE</b></div>
+  </div>
+  <p class="note">All figures are fictional concept statistics.</p>
+</section>
+
+<section id="deep" class="deep">
+  <div class="ambient dark" data-n="30"></div><div class="jelly j1"></div><div class="jelly j2"></div><div class="jelly j3"></div>
+  <div class="whale"></div><div class="kelp glowk"></div>
+  <div class="deep-inner">
+    <h2>DISCOVER THE UNKNOWN</h2>
+    <p class="lead">Beyond the city lies an unexplored world.</p>
+    <button id="diveBtn" class="btn">DIVE DEEPER</button>
+  </div>
+  <div id="abyss" class="abyss"><b>DEPTH: 5000M</b><p>THE OCEAN STILL HAS SECRETS.</p><button id="surf" class="btn ghost">RETURN</button></div>
+</section>
+
+<section id="about" class="sec rv">
+  <h2>ABOUT THE PROJECT</h2>
+  <div class="glass about">
+    <p>Life Underwater is a futuristic concept imagining how humanity could build sustainable cities beneath the ocean. The project explores artificial intelligence, robotics, clean energy, underwater transportation and future lifestyles through an immersive digital experience.</p>
+    <div class="team">
+      <small>CREATED BY</small>
+      <div class="potato" aria-hidden="true"><i></i><i></i><u></u></div>
+      <h3>🥔 TEAM POTATO</h3>
+      <b>BCADS 13</b>
+      <ul class="credits"><li>🎨 UI by <b>Divist</b></li><li>💻 Code by <b>Dev</b></li><li>🚀 Deploy by <b>Hari</b></li></ul>
+      <p>PIXEL PERSONA — Digital Fine-Art &amp; Frontend Designing Challenge</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>🌊 LIFE UNDERWATER</h3>
+  <p class="sub">The future may not be above us.</p>
+  <nav><a href="#home">Home</a><a href="#city">Ocean City</a><a href="#ai">AI &amp; Robots</a><a href="#transport">Transport</a><a href="#energy">Energy</a><a href="#life">Life Below</a><a href="#about">About</a></nav>
+  <p>Created by Team Potato • BCADS 13</p>
+  <p><b>PIXEL PERSONA 2026</b></p>
+  <a href="#home" class="btn ghost">↑ RETURN TO SURFACE</a>
+</footer>
+</div>
+
+<div id="pulse"></div>
+<script src="script.js"></script>
+</body>
+</html>
